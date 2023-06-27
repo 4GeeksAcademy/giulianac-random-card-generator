@@ -1,1 +1,67 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+.card {
+  background-color: white;
+  border-radius: 1vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75%;
+  width: 25%;
+  padding: 1vw;
+  &:before {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    font-size: 80px;
+  }
+  &:after {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    font-size: 80px;
+  }
+  .number {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10vw;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.heart:before,
+  &.heart:after {
+    content: "♥";
+    color: red;
+  }
+
+  &.spade:before,
+  &.spade:after {
+    content: "♠";
+  }
+
+  &.club:before,
+  &.club:after {
+    content: "♣";
+  }
+
+  &.diamond:before,
+  &.diamond:after {
+    content: "♦";
+    color: red;
+  }
+}
+
+#btn {
+  display: inline-block;
+}
+input {
+  display: inline-block;
+  margin: 1vw;
+}
